@@ -78,16 +78,16 @@ public class ContaBancaria implements Serializable {
         System.out.println("BANCO CENTRAL DO BRASIL");
         System.out.println("[1] Salvar conta");
         System.out.println("[2] Carregar conta");
-        System.out.print("iNSIRA UM VALOR: ");
+        System.out.print("INSIRA UM VALOR: ");
         int opcao = scanner.nextInt();
         scanner.nextLine(); 
         System.out.println("");
 
         if (opcao == 1) {
-            System.out.print("Agencia: ");
+            System.out.print("Nome da Agencia: ");
             String agencia = scanner.nextLine();
 
-            System.out.print("Numero da Agencia: ");
+            System.out.print("Numero da Conta: ");
             String numeroConta = scanner.nextLine();
 
             System.out.print("Saldo: ");
@@ -102,7 +102,7 @@ public class ContaBancaria implements Serializable {
             conta.salvarEmArquivo();
 
         } else if (opcao == 2) {
-            System.out.print("Numero da Agencia: ");
+            System.out.print("Nome da Agencia: ");
             String agencia = scanner.nextLine();
 
             System.out.print("Numero da Conta: ");
@@ -113,8 +113,8 @@ public class ContaBancaria implements Serializable {
             if (conta != null) {
                 System.out.println("");
                 System.out.println("Conta carregada com sucesso!");
-                System.out.println("Número da Agência: " + conta.getAgencia());
-                System.out.println("Número da Conta: " + conta.getNumeroConta());
+                System.out.println("Numero da Agência: " + conta.getAgencia());
+                System.out.println("Numero da Conta: " + conta.getNumeroConta());
                 System.out.println("Saldo: " + conta.getSaldo());
                 System.out.println("Nome do Cliente: " + conta.getNomeCliente());
             }
